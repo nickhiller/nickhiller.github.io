@@ -1,2 +1,51 @@
- 
- 
+body {
+    color: #3d3832;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Archivo Black', sans-serif;
+}
+
+h1 {
+    font-size: 35px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 40px;
+    text-align: center;
+}
+
+@media only screen and (min-width: 650px) {
+
+    h1 {
+        font-size: 60px;
+    }
+
+}
+
+p {
+    font-family: 'Merriweather', serif;
+    line-height: 1.5;
+    font-size: 15px;
+    margin: 7px 0;
+
+    &.caption {
+        font-style: italic;
+        font-size: 13px;
+    }
+} 
+
+@media only screen and (min-width: 650px) {
+    p {
+        font-size: 18px;
+        margin: 15px 0;
+    } 
+}
+
+.start {
+    font-family: 'Archivo Black', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+}

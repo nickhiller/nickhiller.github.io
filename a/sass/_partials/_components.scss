@@ -1,2 +1,73 @@
- 
- 
+.page-header {
+    padding: 20px 0;
+    text-align: center;
+    transition: all 1s ease;
+
+    img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        display: inline;
+    }
+
+    h1, p {
+        margin: 0;
+    }
+
+    span {
+        font-style: italic;
+        color: #6f665c;
+        font-size: 18px;
+    }
+
+    @media only screen and (min-height: 500px) {
+        &.collapsed {
+            position: fixed;
+            top: 0;
+            padding: 10px 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            width: 100%;
+            border-bottom: 1px solid #ccc;
+            text-align: left;
+
+            .wrapper {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+
+            img {
+                width: 60px;
+                height: 60px;
+            }
+
+            h1 {
+                font-size: 20px;
+                margin: 0 10px;
+            }
+
+        }
+    }
+
+} 
+
+.primary-work {
+    flex: 0 0 65%;
+    min-width: 0;
+    //border: 1px solid #cccccc;
+    padding: 20px;
+    background: url('http://www.spencerbrewery.com/img/bg-church-outline.png');
+    background-attachment: fixed;
+
+    img {
+        width: 40%;
+        float: left;
+    }
+}
+
+.secondary-work {
+    flex: 0 0 35%;
+    min-width: 0;
+    background: red;
+    height: 2000px;
+}

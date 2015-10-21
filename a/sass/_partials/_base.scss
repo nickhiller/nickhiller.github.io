@@ -1,3 +1,31 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
-    color: red; 
+    margin: 0;
+
+    &.bumped {
+        margin-top: 230px;
+    }
+
+ }
+
+ img {
+    max-width: 100%;
+ }
+
+ a {
+    color: #000000;
+    text-decoration: none;
+    border-bottom: 1px dashed #6f665c;
+
+    &:hover {
+        border-bottom: 1px solid #6f665c;
+        color: #474089;
+    }
  }
