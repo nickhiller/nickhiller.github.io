@@ -39,7 +39,10 @@ h2 {
 
 @media only screen and (min-width: 650px) {
   h1 {
-    font-size: 60px; } }
+    font-size: 60px; }
+
+  h2 {
+    margin-top: 80px; } }
 p {
   font-family: 'Merriweather', serif;
   line-height: 1.5;
@@ -135,11 +138,11 @@ p {
     flex-wrap: wrap;
     align-items: center; } }
 .spencer-intro {
-  background: url("http://www.spencerbrewery.com/img/bg-church-outline.png");
-  padding: 70px 0 30px;
-  min-height: 100vh;
+  background: url("../img/bg-church.png");
+  padding: 70px 0 50px;
   background-attachment: fixed;
-  background-size: cover; }
+  background-size: cover;
+  margin-bottom: 50px; }
   .spencer-intro p {
     font-size: 20px; }
 
