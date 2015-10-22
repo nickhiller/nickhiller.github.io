@@ -56,7 +56,8 @@
     min-width: 0;
     //border: 1px solid #cccccc;
     padding: 20px;
-    background: url('http://www.spencerbrewery.com/img/bg-church-outline.png');
+    background: url('../img/bg-church.png');
+    background-size: cover;
     background-attachment: fixed;
 
     img {
@@ -69,5 +70,5 @@
     flex: 0 0 35%;
     min-width: 0;
     background: red;
-    height: 2000px;
+    height: 200px;
 }
