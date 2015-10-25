@@ -3,21 +3,38 @@
     text-align: center;
     transition: all 1s ease;
 
-    img {
+    .nick-photo {
         width: 150px;
         height: 150px;
-        border-radius: 50%;
         display: inline;
     }
 
+    .social {
+        width: 25px;
+        margin: 10px;
+    }
+
+    a {
+        border: 0;
+    }
+
     h1, p {
-        margin: 0;
+        margin: -10px 0 0;
     }
 
     span {
-        font-style: italic;
         color: #6f665c;
-        font-size: 18px;
+        font-family: 'Archivo Black', sans-serif;
+        text-transform: uppercase;
+        font-size: 16px;
+        letter-spacing: 1.5px;
+        display: none;
+    }
+
+    @media only screen and (min-width: 520px) {
+        span {
+            display: block;
+        }
     }
 
     @media only screen and (min-height: 500px) {
@@ -34,16 +51,27 @@
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
+                position: relative;
             }
 
-            img {
+            .nick-photo {
                 width: 60px;
                 height: 60px;
+            }
+
+            .social-links {
+                position: absolute;
+                right: 0;
+                top: 5px;
             }
 
             h1 {
                 font-size: 20px;
                 margin: 0 10px;
+            }
+
+            p {
+                margin: 5px 10px 0 0;
             }
 
         }
@@ -52,23 +80,94 @@
 } 
 
 .primary-work {
-    flex: 0 0 65%;
     min-width: 0;
-    //border: 1px solid #cccccc;
     padding: 20px;
     background: url('../img/bg-church.png');
     background-size: cover;
     background-attachment: fixed;
+    text-align: center;
 
     img {
         width: 40%;
-        float: left;
+    }
+
+    h3 {
+        font-size: 30px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
     }
 }
 
 .secondary-work {
-    flex: 0 0 35%;
     min-width: 0;
-    background: red;
-    height: 200px;
+    min-height: 100%;
+    position: relative;
+    text-align: center;
 }
+
+.chimay {
+    background: url('../img/bg-chimay.png');
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 20px;
+}
+
+.schneider {
+    background: url('../img/schneider-bg.png');
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 20px;
+}
+
+@media only screen and (min-width: 780px) {
+
+    .secondary-work {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+    }
+
+    .chimay {
+        flex: 0 0 50%;
+    }
+
+    .schneider {
+       flex: 0 0 50%;
+    }
+
+}
+
+@media only screen and (min-width: 1000px) {
+
+    .flex-container-home {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+    }
+
+    .secondary-work {
+        flex: 0 0 35%;
+    }
+
+    .primary-work {
+        flex: 0 0 65%;
+    }
+
+    .chimay {
+        position: absolute;
+        height: 50%;
+        width: 100%;
+    }
+
+    .schneider {
+        position: absolute;
+        height: 50%;
+        width: 100%;
+        bottom: 0;
+    }
+
+}
+
+
+
+

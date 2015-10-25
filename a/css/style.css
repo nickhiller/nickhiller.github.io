@@ -66,17 +66,27 @@ p {
   padding: 20px 0;
   text-align: center;
   transition: all 1s ease; }
-  .page-header img {
+  .page-header .nick-photo {
     width: 150px;
     height: 150px;
-    border-radius: 50%;
     display: inline; }
+  .page-header .social {
+    width: 25px;
+    margin: 10px; }
+  .page-header a {
+    border: 0; }
   .page-header h1, .page-header p {
-    margin: 0; }
+    margin: -10px 0 0; }
   .page-header span {
-    font-style: italic;
     color: #6f665c;
-    font-size: 18px; }
+    font-family: 'Archivo Black', sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    display: none; }
+  @media only screen and (min-width: 520px) {
+    .page-header span {
+      display: block; } }
   @media only screen and (min-height: 500px) {
     .page-header.collapsed {
       position: fixed;
@@ -89,31 +99,86 @@ p {
       .page-header.collapsed .wrapper {
         display: flex;
         flex-wrap: wrap;
-        align-items: center; }
-      .page-header.collapsed img {
+        align-items: center;
+        position: relative; }
+      .page-header.collapsed .nick-photo {
         width: 60px;
         height: 60px; }
+      .page-header.collapsed .social-links {
+        position: absolute;
+        right: 0;
+        top: 5px; }
       .page-header.collapsed h1 {
         font-size: 20px;
-        margin: 0 10px; } }
+        margin: 0 10px; }
+      .page-header.collapsed p {
+        margin: 5px 10px 0 0; } }
 
 .primary-work {
-  flex: 0 0 65%;
   min-width: 0;
   padding: 20px;
   background: url("../img/bg-church.png");
   background-size: cover;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  text-align: center; }
   .primary-work img {
-    width: 40%;
-    float: left; }
+    width: 40%; }
+  .primary-work h3 {
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px; }
 
 .secondary-work {
-  flex: 0 0 35%;
   min-width: 0;
-  background: red;
-  height: 200px; }
+  min-height: 100%;
+  position: relative;
+  text-align: center; }
 
+.chimay {
+  background: url("../img/bg-chimay.png");
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 20px; }
+
+.schneider {
+  background: url("../img/schneider-bg.png");
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 20px; }
+
+@media only screen and (min-width: 780px) {
+  .secondary-work {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch; }
+
+  .chimay {
+    flex: 0 0 50%; }
+
+  .schneider {
+    flex: 0 0 50%; } }
+@media only screen and (min-width: 1000px) {
+  .flex-container-home {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch; }
+
+  .secondary-work {
+    flex: 0 0 35%; }
+
+  .primary-work {
+    flex: 0 0 65%; }
+
+  .chimay {
+    position: absolute;
+    height: 50%;
+    width: 100%; }
+
+  .schneider {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    bottom: 0; } }
 .wrapper {
   width: 90%;
   margin: 0 auto;
@@ -137,7 +202,7 @@ p {
   .flex-container-small {
     display: flex;
     flex-wrap: wrap;
-    align-items: center; } }
+    align-items: stretch; } }
 .spencer-intro {
   background: url("../img/bg-church.png");
   padding: 70px 0 50px;
