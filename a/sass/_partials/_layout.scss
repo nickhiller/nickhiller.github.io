@@ -34,12 +34,25 @@
     }
 }
 
-.spencer-intro {
-    background: url('../img/bg-church.png');
+.work-intro {
     padding: 70px 0 50px;
     background-attachment: fixed;
     background-size: cover;
     margin-bottom: 50px;
+
+    &.spencer-intro {
+        background: url('../img/bg-church.png');
+    }
+
+    &.chimay-intro {
+        background: url('../img/bg-chimay2.png');
+        background-size: cover;
+    }
+
+    &.schneider-intro {
+        background: url('../img/schneider-bg2.png');
+        background-size: cover;
+    }
 
     p {
         font-size: 20px;

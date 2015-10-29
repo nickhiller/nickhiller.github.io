@@ -265,13 +265,20 @@ a.cta {
     display: flex;
     flex-wrap: wrap;
     align-items: stretch; } }
-.spencer-intro {
-  background: url("../img/bg-church.png");
+.work-intro {
   padding: 70px 0 50px;
   background-attachment: fixed;
   background-size: cover;
   margin-bottom: 50px; }
-  .spencer-intro p {
+  .work-intro.spencer-intro {
+    background: url("../img/bg-church.png"); }
+  .work-intro.chimay-intro {
+    background: url("../img/bg-chimay2.png");
+    background-size: cover; }
+  .work-intro.schneider-intro {
+    background: url("../img/schneider-bg2.png");
+    background-size: cover; }
+  .work-intro p {
     font-size: 20px; }
 
 .flex-item-bottle {
