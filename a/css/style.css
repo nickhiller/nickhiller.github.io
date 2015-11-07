@@ -71,6 +71,9 @@ a.cta {
   font-size: 14px;
   letter-spacing: 1px; }
 
+.centered {
+  text-align: center; }
+
 .page-header {
   padding: 20px 0;
   text-align: center;
@@ -80,8 +83,12 @@ a.cta {
     height: 150px;
     display: inline; }
   .page-header .social {
-    width: 25px;
-    margin: 10px; }
+    width: 20px;
+    margin: 10px 5px; }
+  @media only screen and (min-width: 800px) {
+    .page-header .social {
+      width: 25px;
+      margin: 10px; } }
   .page-header a {
     border: 0; }
   .page-header h1, .page-header p {
@@ -93,7 +100,7 @@ a.cta {
     font-size: 16px;
     letter-spacing: 1.5px;
     display: none; }
-  @media only screen and (min-width: 520px) {
+  @media only screen and (min-width: 590px) {
     .page-header span {
       display: block; } }
   @media only screen and (min-height: 500px) {
@@ -309,7 +316,7 @@ a.cta {
     margin: 0 auto; }
 
 @media only screen and (min-width: 650px) {
-  .flex-item-bottle img {
+  .flex-item-bottle.short-bottle img {
     width: 100%; } }
 .flex-item-intro img {
   width: 30px; }
