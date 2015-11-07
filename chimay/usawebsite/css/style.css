@@ -1,0 +1,1381 @@
+/* 
+ * HTML5 ‰Ï¡ Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling. 
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ *
+ * Detailed information about this CSS: h5bp.com/css
+ * 
+ * ==|== normalize ==========================================================
+ */
+
+
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ * 2. Force vertical scrollbar in non-IE
+ * 3. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
+ */
+/** { margin: 0; padding: 0; }*/
+html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body { margin: 0; font-size: 13px; line-height: 1.231; 
+	background: #e5ded0 url('../img/bg-linen.png');
+	font-family: 'ClarendonLTStdLight', 'Georgia', serif;
+	
+}
+
+body, button, input, select, textarea { font-family: sans-serif; color: #000; }
+
+/* 
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate
+ * Also: hot pink! (or customize the background color to match your design)
+ */
+
+::-moz-selection { background: #cccccc; color: #000; text-shadow: none; }
+::selection { background: #cccccc; color: #000; text-shadow: none; }
+
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+
+a { color: #9c9c9c; text-decoration:none;}
+a:visited { color: #9c9c9c; }
+a:hover { color: #000000; }
+a:focus { outline: thin dotted; }
+
+/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+a:hover, a:active { outline: 0; }
+
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+
+abbr[title] { border-bottom: 1px dotted; }
+
+b, strong { font-weight: bold; }
+
+blockquote { margin: 1em 40px; }
+
+dfn { font-style: italic; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+/* Redeclare monospace font family: h5bp.com/j */
+pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
+
+/* Improve readability of pre-formatted text in all browsers */
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+
+small { font-size: 85%; }
+
+/* Position subscript and superscript content without affecting line-height: h5bp.com/k */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+@font-face {
+    font-family: 'ClarendonLTStdBold';
+    src: url('clarendonltstd-bold-webfont.eot');
+    src: url('clarendonltstd-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('clarendonltstd-bold-webfont.woff') format('woff'),
+         url('clarendonltstd-bold-webfont.ttf') format('truetype'),
+         url('clarendonltstd-bold-webfont.svg#ClarendonLTStdBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ClarendonLTStdLight';
+    src: url('clarendonltstd-light-webfont.eot');
+    src: url('clarendonltstd-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('clarendonltstd-light-webfont.woff') format('woff'),
+         url('clarendonltstd-light-webfont.ttf') format('truetype'),
+         url('clarendonltstd-light-webfont.svg#ClarendonLTStdLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ClarendonLTStdRoman';
+    src: url('clarendonltstd-webfont.eot');
+    src: url('clarendonltstd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('clarendonltstd-webfont.woff') format('woff'),
+         url('clarendonltstd-webfont.ttf') format('truetype'),
+         url('clarendonltstd-webfont.svg#ClarendonLTStdRoman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+h1{
+font-size: 64px;
+font-family: 'ClarendonLTStdRoman', 'Georgia', serif;
+line-height: 60px;
+text-shadow:0px 1px 0px #FFFFFF;
+margin: 0px;
+}
+
+p{
+font-family: 'ClarendonLTStdLight', 'Georgia', serif;
+font-size: 18px;
+}
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+
+ul, ol { margin: 1em 0; padding: 0 0 0 0px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+
+/*
+ * 1. Improve image quality when scaled in IE7: h5bp.com/d
+ * 2. Remove the gap between images and borders on image containers: h5bp.com/e 
+ */
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+/*
+ * Correct overflow not hidden in IE9 
+ */
+
+svg:not(:root) { overflow: hidden; }
+
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+
+figure { margin: 0; }
+
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+
+/* Indicate that 'label' will shift focus to the associated form element */
+label { cursor: pointer; }
+
+/* 
+ * 1. Correct color not inheriting in IE6/7/8/9 
+ * 2. Correct alignment displayed oddly in IE6/7 
+ */
+
+legend { border: 0; *margin-left: -7px; padding: 0; }
+
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ * 2. Correct inner spacing displayed oddly in IE6/7
+ */
+
+button, input { line-height: normal; *overflow: visible; }
+
+/*
+ * Reintroduce inner spacing in 'table' to avoid overlap and whitespace issues in IE6/7
+ */
+
+table button, table input { *overflow: auto; }
+
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ */
+
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+
+/*
+ * Consistent box sizing and appearance
+ */
+
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+/* 
+ * Remove inner padding and border in FF3/4: h5bp.com/l 
+ */
+
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/* 
+ * 1. Remove default vertical scrollbar in IE6/7/8/9 
+ * 2. Allow only vertical resizing
+ */
+
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+
+/* Colors for form validity */
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+
+/* ==|== primary styles =====================================================
+   Author: Sophie Shepherd (sophieshepherd.com)
+   ========================================================================== */
+
+header {
+	background-color: #ffffff;
+	  /* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  /* IE 5-7 */
+  filter: alpha(opacity=95);
+  /* Netscape */
+  -moz-opacity: 0.95;
+  /* Safari 1.x */
+  -khtml-opacity: 0.95;
+  /* Good browsers */
+  opacity: 0.95;
+  border-bottom: 1px #c5beaf solid;
+  height: 60px; 
+  width: 100%;
+  position:fixed;
+  z-index: 1000;
+}
+
+#nav{
+	text-transform: uppercase;
+	font-size: 16px;
+	font-family: 'ClarendonLTStdLight', 'Georgia', serif;
+	letter-spacing: 1.5px; 
+	padding-left: 40px;
+	text-shadow:0px 1px 0px #FFFFFF;
+}
+
+#nav li{
+display: block;
+float: left;
+padding: 20px 24px;
+}
+
+#nav li a {
+text-decoration: none;
+color: #4b4b4b;
+}
+
+#nav li a:hover {
+color: #000000;
+position: relative; top: 1px;
+}
+
+#nav li a:active {
+color: #000000;
+border-bottom: 2px solid #7ddbe3;
+}
+
+#social {
+background: url('../img/bg-social.png') no-repeat right;
+width: 960px;
+height: 34px;
+margin: 0px auto;
+position: relative;
+top:60px;
+padding-right: 40px;
+padding-top: 23px;
+}
+
+#social img {
+float: right;
+padding-right: 10px;
+}
+
+.x{
+width: 24px;
+height:24px;
+position: relative;
+top: 15px;
+left: 940px;
+}
+
+/* HOMEPAGE IMAGE */
+
+#homepage{
+		background: url('../img/homepage.png') no-repeat center;
+		height: 648px;
+		width:100%;
+		min-width: 980px;
+		margin: 0px auto;
+}
+
+/* Products */
+
+#productsHolder{
+margin: 10px auto 0px;
+width: 980px;
+height: 540px;
+border: 10px solid #5f5e3a;
+background: #f1f0ec;
+z-index:20;
+}
+
+#products{
+	position:absolute;
+	margin: 0px auto;
+	width: 980px;
+	height: 540px;
+	/*border: 10px solid #5f5e3a;*/
+	background: #f1f0ec;
+	z-index:20;
+}
+
+#glasses {
+	color: white;
+	font-family: 'ClarendonLTStdRoman', 'Georgia', serif;
+	font-size: 56px;
+	text-align: center;
+	margin: 95px auto;
+	width: 789px;
+}
+
+#glasses a{
+	text-decoration: none;
+}
+
+#glasses li{
+display: block;
+float: left;
+width: 213px;
+height: 334px;
+opacity: 1;
+-moz-transition: all 1s ease;
+-webkit-transition: all 1s ease;
+-o-transition: all 1s ease;
+transition: all 1s ease;
+}
+
+
+#glasses li:hover {
+opacity: 0.8;
+}
+
+.middle {
+padding: 0px 75px;
+}
+
+.beer-title{
+color: #f1f0ec;
+font-family: 'ClarendonLTStdRoman', 'Georgia', serif;
+text-decoration: none;
+}
+
+#glasses li .beer-title {
+opacity: 0;
+-moz-transition: all 1s ease;
+-webkit-transition: all 1s ease;
+-o-transition: all 1s ease;
+transition: all 1s ease;
+}
+
+#glasses li:hover .beer-title {
+color: #f1f0ec;
+opacity: 1;
+position: relative;
+bottom: 230px;
+}
+
+#beer-info {
+margin: 50px auto;
+width: 1000px;
+height: 540px;
+position:absolute;
+}
+
+#beer-info-red {
+position:absolute;
+margin: 0px auto;
+width: 980px;
+height: 540px;
+z-index:10;
+}
+
+#beer-info-white {
+	position:absolute;
+	margin: 0px auto;
+	width: 980px;
+	height: 540px;
+	z-index:9;
+}
+
+#beer-info-blue {
+	position:absolute;
+	margin: 0px auto;
+	width: 980px;
+	height: 540px;
+	z-index:8;
+}
+
+.red {
+background: #f1f0ec url('../img/everything-red.png') no-repeat;
+background-position: 750px 80px;
+}
+
+.white {
+background: #f1f0ec url('../img/everything-white.png') no-repeat;
+background-position: 750px 80px;
+}
+
+.blue {
+background: #f1f0ec url('../img/everything-blue.png') no-repeat;
+background-position: 750px 80px;
+}
+
+.metadata{
+float: right;
+width: 450px;
+padding: 25px 100px 25px 20px;
+margin: 0px 0px 30px;
+background: url('../img/dot.png') repeat-y;
+}
+
+.category-name {
+	font-family: ff-meta-web-pro,sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 18px;
+	letter-spacing: 1.2px;
+	text-shadow:0px 1px 0px #FFFFFF;
+}
+
+.category-answer {
+	font-family: 'ClarendonLTStdLight', 'Georgia', serif;
+	text-transform: uppercase;
+	font-size: 24px;
+	letter-spacing: 1.5px;
+	text-shadow:0px 1px 0px #FFFFFF;
+}
+
+.pairing-name {
+	font-family: 'ff-meta-web-pro',sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 14px;
+	text-shadow:0px 1px 0px #FFFFFF;
+}
+
+.pairing-answer {
+	font-family: 'ClarendonLTStdLight', 'Georgia', serif;
+	font-size: 20px;
+	line-height: 28px;
+	letter-spacing: 1.1px;
+	text-shadow:0px 1px 0px #FFFFFF;
+}
+
+.serve{
+	font-family: ff-meta-web-pro,sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	text-shadow:0px 1px 0px #FFFFFF;
+}
+
+.horiz-border {
+background: url('../img/dot.png') repeat;
+height: 5px;
+margin: 20px 0px 20px -20px;
+}
+
+.wide {
+width: 320px;
+}
+
+.lesswide {
+width: 260px;
+}
+
+.description {
+	width: 390px;
+	padding: 20px 0px 0px 30px;
+}
+
+.other-beer{
+	font-family: ff-meta-web-pro,sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 20px;
+	letter-spacing: 1.1px;
+	float: right;
+	text-align: right;
+	display: block;
+	width: 150px;
+	padding: 25px 25px 0px 0px;
+	text-shadow:0px 1px 0px #FFFFFF;
+}
+
+.other-beer a{	
+	color: #cccccc; 
+	text-decoration: none;
+}
+
+.other-beer a:hover{
+	color: #6f6f6f;
+}
+
+.description p{
+line-height: 32px;
+padding:0px 25px 0px 0px;
+}
+
+/* Terroir */
+
+#street{
+background: url('../img/street.png') no-repeat center;
+		width:100%;
+		min-width: 980px;
+height: 719px;
+margin: 0 auto;
+}
+
+.hide { position: absolute; top: -9999px; left: -9999px; }
+
+#terroir {
+	margin: 0px auto 0px;
+	width: 980px;
+	min-height: 300px;
+	border: 10px solid #f2ba28;
+	background: #F1F0EC;  
+ }
+
+#terroir .title{
+	margin:0;
+	padding:0;
+	margin-left: -50px;
+	margin-top: 10px;
+}
+
+#terroir p{
+	margin:0;
+	padding:0;
+	line-height: 32px;
+	text-transform: none;
+	padding: 10px 50px 40px;
+}
+
+#terroir-categories{
+	text-transform: uppercase;
+	font-size: 18px;
+	font-family: 'ff-meta-web-pro', sans-serif;
+	letter-spacing: 1.5px; 
+	padding-left: 35px;
+	text-shadow:0px 1px 0px #FFFFFF;
+}
+
+#terroir-categories li{
+	display: block;
+	float: left;
+	padding: 5px 15px;
+}
+
+#terroir-categories li a {
+	margin:0;
+	padding:0;
+	text-decoration: none;
+	color: #706551;
+	padding-bottom: 3px;
+}
+
+#terroir-categories li a:hover {
+/*	margin:0;
+	padding:0;*/
+	color: #000000;
+	border-bottom: 1px solid #cccccc;
+	background: url('../img/terroirLinkHover.png') repeat-x bottom;
+}
+
+#terroir-categories li a:active {
+	margin:0;
+	padding:0;
+color: #000000;
+border-bottom: 1px solid #cccccc;
+}
+
+#terroir .nav { overflow: hidden; margin: 0 0 10px 30px; }
+#terroir .nav li {float: left; margin: 0 10px 0 0; }
+#terroir .nav li.last { margin-right: 0; }
+#terroir .nav li a { display: block; padding: 5px; text-align: center; border: 0; }
+#terroir .nav li a:hover {  }
+
+#terroir ul { margin:0;
+	padding:0;list-style: none; }
+#terroir ul li a { margin:0;
+	padding:0;display: block; border-bottom: 1px solid #666; padding: 4px; color: #666; }
+#terroir ul li a:hover {  }
+#terroir ul li:last-child a { border: none; }
+
+.list-wrap{
+	padding-bottom:20px;
+}
+
+/* Ingredients */
+
+#farm{
+background: url('../img/farm.png') no-repeat center;
+width:100%;
+min-width: 980px;
+height: 735px;
+margin: 0 auto;
+}
+
+#ingredientsHolder{
+margin: -100px auto 0px;
+width: 980px;
+height: 450px;
+border: 10px solid #1e2d53;	
+background: #f1f0ec;
+margin-bottom: 0px;
+}
+
+#ingredients{
+/*	display:none;*/
+	margin: 0px auto 0px;
+	width: 980px;
+	height: 450px;
+	/*border: 10px solid #aa8c5f;*/
+	background: #f1f0ec;
+	position:absolute;
+	z-index: 120;
+}
+
+.ingrText{
+	font-family: 'ClarendonLTStdLight', 'Georgia', serif;
+	font-size: 18px;
+	line-height: 32px;
+	text-transform: none;
+/*	padding: 10px 0px;*/
+}
+
+#ingredients-water{
+/*	display:none;*/
+width: 980px;
+height: 450px;
+/*background: #f1f0ec;*/
+background: url(ingredientBg.png) repeat-x top;
+position:absolute;
+z-index: 110;
+}
+
+#ingredients-yeast{
+/*	display:none;*/
+	width: 980px;
+	height: 450px;
+/*	background: #f1f0ec;*/
+	background: url(ingredientBg.png) repeat-x top;
+	position:absolute;
+	z-index: 110;
+}
+#ingredients-hops{
+/*	display:none;*/
+	width: 980px;
+	height: 450px;
+/*	background: #f1f0ec;*/
+	background: url(ingredientBg.png) repeat-x top;
+	position:absolute;
+
+}
+#ingredients-barley{
+/*	display:none;*/
+	width: 980px;
+	height: 450px;
+/*	background: #f1f0ec;*/
+	background: url(ingredientBg.png) repeat-x top;
+	position:absolute;
+}
+
+#ingredients-wheat{
+/*	display:none;*/
+	width: 980px;
+	height: 450px;
+	background: #f1f0ec;
+	background: url(ingredientBg.png) repeat-x top;
+	position:absolute;
+}
+
+#ingredients-title{
+background: url('../img/title-ingredients.png') no-repeat bottom;
+width: 325px;
+height: 85px;
+margin: 40px auto 20px;
+}
+
+.single-ingredient{
+height: 200px;
+width: 180px;
+float: left;
+}
+
+#ingredients .single-ingredient p{
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 30px;
+	font-family: 'ff-meta-web-pro', sans-serif;
+	line-height: 0px;
+	text-align: center;
+	padding-top: 65px;
+	padding-bottom: 0px;
+}
+
+#ingredients a{
+	text-decoration: none;
+	color:#000000;
+}
+
+.water{
+background: url('../img/bg-water.png') no-repeat bottom;
+margin-left: 30px;
+background-position: 30px 10px;
+}
+
+.yeast{
+background: url('../img/bg-yeast.png') no-repeat bottom;
+}
+
+.hops{
+background: url('../img/bg-hops.png') no-repeat bottom;
+}
+
+.barley{
+background: url('../img/bg-barley.png') no-repeat bottom;
+}
+
+.wheat{
+background: url('../img/bg-wheat.png') no-repeat bottom;
+}
+
+.measurement {
+	font-family: 'ClarendonLTStdLight', 'Georgia', serif;
+	text-transform: uppercase;
+	font-size: 20px;
+	letter-spacing: 1.5px;
+	text-align: center;
+	margin: 0 auto;
+	line-height: 0px;
+}
+
+.exponent{
+	font-size: 14px;
+	position:relative;
+	bottom: 10px;
+}
+
+#ingredients p{
+line-height: 32px;
+text-transform: none;
+padding: 10px 0px;
+}
+
+.ingredient-description{
+width: 640px;
+padding: 20px 0px 0px 180px;
+margin: 0 auto;
+float: left;
+}
+
+.water-color{
+background: url('../img/bg-water-color.png') no-repeat bottom;
+background-position: 10px 50px;
+}
+
+.yeast-color{
+background: url('../img/bg-yeast-color.png') no-repeat bottom;
+background-position: 10px 70px;
+}
+
+.hops-color{
+background: url('../img/bg-hops-color.png') no-repeat bottom;
+background-position: 10px 70px;
+}
+
+.barley-color{
+background: url('../img/bg-barley-color.png') no-repeat bottom;
+background-position: 10px 10px;
+}
+
+.wheat-color{
+background: url('../img/bg-wheat-color.png') no-repeat bottom;
+background-position: 10px 40px;
+}
+
+  a.left-arrow {
+	background:url('../img/arrows.png') no-repeat;
+	float:left;
+	text-indent:-9999px;
+	height:50px;
+	width:27px;
+	background-position: 0 -50px;
+	margin: 150px 30px 0px 10px;
+	}
+
+a.left-arrow:hover {
+	background-position: 0 0;
+	}
+	
+a.right-arrow {
+	background:url('../img/arrows.png') no-repeat;
+	float:right;
+	text-indent:-9999px;
+	height:50px;
+	width:27px;
+	background-position: -25px -50px;
+	margin: 150px 10px 0px 10px;
+	}
+
+a.right-arrow:hover {
+	background-position: -25px 0;
+	}
+
+
+
+/* Trappist */
+
+#monastery{
+background: url('../img/trappist2.png') no-repeat center;
+width:100%;
+min-width: 980px;
+height: 592px;
+margin: 0 auto;
+}
+
+
+#trappist{
+margin: 0px auto;
+width: 900px;
+height: 380px;
+border: 10px solid #645646;
+background: #f1f0ec;
+font-family: 'ClarendonLTStdLight', 'Georgia', serif;
+font-size: 18px;
+line-height: 32px;
+text-transform: none;
+padding: 30px 30px 60px 50px;
+}
+
+#trappist h1{
+background: url('../img/trappist-logo.png') no-repeat left;
+padding: 20px 0px 20px 110px;
+}
+
+#trappist ol{
+font-family: 'ClarendonLTStdRoman', 'Georgia', serif;
+color: #c2c2c2;
+font-size: 34px;
+margin-left: 40px;
+margin-top: 30px;
+}
+
+#trappist ol li{
+
+}
+
+#trappist li.padone{
+width: 220px;
+float: left;
+margin-right: 60px;
+}
+
+#trappist li.padtwo{
+width: 230px;
+float: left;
+margin-right: 60px;
+}
+
+#trappist li.padthree{
+width: 250px;
+float: left;
+margin-right: 0px;
+}
+
+#trappist ol p{
+font-family: 'ff-meta-web-pro', sans-serif;
+color: #000000;
+font-size: 16px;
+line-height: 26px;
+margin: 0px;
+}
+
+#trappist .rule{
+color: #000000;
+font-family: 'ff-meta-web-pro', sans-serif;
+text-transform: uppercase;
+font-size: 26px;
+font-weight: 700;
+}
+
+
+
+
+/* History */
+
+#barrelsbottles {
+	width:100%;
+	min-width: 980px;
+	height:684px;
+	background:url('../img/race.png') no-repeat center;
+	margin: 0px auto;
+}
+
+#history{
+margin: -50px auto 0px;
+width: 980px;
+height: 500px;
+border: 10px solid #7a1616;
+background: #f1f0ec;
+}
+
+	#timeline {
+		width: 940px;
+		height: 500px;
+		overflow: hidden;
+		margin: 20px auto;
+		position: relative;
+		background: url('../img/dot.gif') left 58px repeat-x;
+	}
+		#dates {
+			width: 800px;
+			height: 60px;
+			overflow: hidden;
+			margin-bottom: 20px;
+		}
+			#dates li {
+				list-style: none;
+				float: left;
+				width: 100px;
+				height: 50px;
+				font-size: 24px;
+				text-align: center;
+				background: url('../img/biggerdot.png') center bottom no-repeat;
+				font-family: 'ClarendonLTStdLight', 'Georgia', serif;
+				font-size: 18px;
+			}
+				#dates a {
+					line-height: 38px;
+					padding-bottom: 10px;
+					text-decoration: none;
+					color: #CCCCCC;
+				}
+				#dates .selected {
+			        font-size: 20px;
+			        color: #000000;
+				}
+		
+		#issues {
+			width: 900px;
+			height: 350px;
+			overflow: hidden;
+		}	
+			#issues li {
+				width: 900px;
+				height: 350px;
+				list-style: none;
+				float: left;
+			}
+				#issues li img {
+					float: left;
+					margin: 10px 30px 10px 50px;
+				}
+				#issues li h1 {
+					color: #000000;
+					font-size: 60px;
+					margin: 60px 0 20px;
+					
+				}
+				#issues li p {
+					font-size: 18px;
+					margin-right: 70px;
+					font-weight: normal;
+					line-height: 22px;
+					font-family: 'ff-meta-web-pro', sans-serif;
+				}
+		
+
+		#next,
+		#prev {
+			position: absolute;
+			top: 0;
+			font-size: 70px;
+			top: 230px;
+			width: 22px;
+			height: 38px;
+			background-position: 0 0;
+			background-repeat: no-repeat;
+			text-indent: -9999px;
+			overflow: hidden;
+		}
+			#next:hover,
+			#prev:hover {
+				background-position: 0 -76px;
+			}
+			#next {
+				right: 0;
+				background-image: url('../img/next.png');
+			}
+			#prev {
+				left: 0;
+				background-image: url('../img/prev.png');
+			}
+				#next.disabled,
+				#prev.disabled {
+					opacity: 0.2;
+				}
+
+
+
+
+
+#contact {
+	width:100%;
+	min-width: 980px;
+	height: 810px;
+	background:url('../img/mountains.png') no-repeat center bottom;
+	margin: 0px auto;
+	line-height:32px;
+}
+
+
+.emailus {
+width: 500px;
+float: right;
+padding: 0px 10px 0px 40px;
+margin: 40px 0px 30px;
+background: url('../img/dot.png') repeat-y;
+}
+
+#legal {
+text-align: center;
+width: 400px;
+margin: 40px 0px 30px 0px;
+float: left;
+}
+
+#legal p.small{
+font-size: 12px;
+line-height:20px;
+}
+
+.emailbutton{
+border: 7px solid #9c968a;
+padding: 10px;
+background-color: #ffffff;
+font-family: 'ClarendonLTStdBold', 'Georgia', serif;
+font-size: 36px;
+text-align: center;
+width: 200px;
+}
+
+.emailbutton a{
+color: #000000;
+text-decoration:none;
+}
+
+.social-footer{
+padding: 20px 5px 10px 0px;
+}
+
+
+
+#contactForm, .statusMessage, input[type="submit"], input[type="button"] {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;  
+  border-radius: 10px;
+}
+
+
+/* Style for the contact form and status messages */
+
+#contactForm, .statusMessage {
+  color: #000;
+  background-color: #ffffff;
+  border: 5px solid #000;
+  -moz-box-shadow: 0 0 50px rgba(0, 0, 0, .3);
+  -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, .3);
+  box-shadow: 0 0 50px rgba(0, 0, 0, .3);
+}
+
+
+/* The form dimensions */
+
+#contactForm {
+  width: 600px;
+  height: 400px;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+
+/* Position the form in the middle of the window (if JavaScript is enabled) */
+
+#contactForm.positioned {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+
+/* Dimensions and position of the status messages */
+
+.statusMessage {
+  display: none;
+  margin: auto;
+  width: 30em;
+  height: 2em;
+  padding: 1.5em;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.statusMessage p {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* Give form elements consistent margin, padding and line height */
+
+#contactForm ul {
+  list-style: none;
+  margin: 0;
+  padding: 15px 0px;
+}
+
+#contactForm ul li {
+  margin: .9em 0 0 0;
+  padding: 0;
+}
+
+#contactForm input, #contactForm label {
+  line-height: 1em;
+}
+
+
+/* The field labels */
+
+label {
+  display: block;
+  float: left;
+  clear: left;
+  text-align: right;
+  width: 28%;
+  padding: .4em 0 0 0;
+  margin: .15em .5em 0 0;
+  font-weight: bold;
+}
+
+
+/* The fields */
+
+input, textarea {
+  display: block;
+  margin: 0;
+  padding: .4em;
+  width: 67%;
+  font-family: "Helvetica", sans-serif;
+  font-size: 1em;
+  border: 1px solid #aaa;
+  -moz-box-shadow: rgba(0,0,0,.2) 0 1px 4px inset;
+  -webkit-box-shadow: rgba(0,0,0,.2) 0 1px 4px inset;
+  box-shadow: rgba(0,0,0,.2) 0 1px 4px inset;
+  background: #fff;
+}
+
+textarea {
+  height: 13em;
+  line-height: 1.5em;
+  resize: none;
+  background: #fff;
+}
+
+
+/* Place a border around focused fields, and hide the inner shadow */
+
+#contactForm *:focus {
+  border: 1px solid #000;
+  outline: none;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+    background: #fff;
+}
+
+
+/* Display correctly filled-in fields with a green background */
+
+input:valid, textarea:valid {
+  background: #fff;
+}
+
+
+/* The Send and Cancel buttons */
+
+input[type="submit"], input[type="button"] {
+  float: right;
+  margin: 2em 1em 0 1em;
+  width: 10em;
+  padding: .5em;
+  border: 1px solid #666;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;  
+  border-radius: 10px;
+  color: #fff;
+  background: #0a0;
+  font-size: 1em;
+  line-height: 1em;
+  font-weight: bold;
+  opacity: .7;
+  -webkit-appearance: none;
+  -moz-transition: opacity .5s;
+  -webkit-transition: opacity .5s;
+  -o-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:active,
+input[type="button"]:hover,
+input[type="button"]:active {
+  cursor: pointer;
+  opacity: 1;
+}
+
+input[type="submit"]:active, input[type="button"]:active {
+  color: #333;
+  background: #eee;
+  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+  box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+}
+
+input[type="button"] {
+  background: #f33;
+}
+
+
+
+
+/* ==|== non-semantic helper classes ========================================
+   Please define your styles before this section.
+   ========================================================================== */
+
+/* For image replacement */
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden { display: none !important; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* Contain floats: h5bp.com/q */ 
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+/* For Centering Content in Full Width BG*/ 
+.wrapped {
+width: 1000px;
+margin: 0px auto;
+}
+
+
+/* ==|== media queries ======================================================
+   PLACEHOLDER Media Queries for Responsive Design.
+   These override the primary ('mobile first') styles
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+  /* Style adjustments for viewports 480px and over go here */
+
+}
+
+@media only screen and (min-width: 768px) {
+  /* Style adjustments for viewports 768px and over go here */
+
+}
+
+
+
+/* ==|== print styles =======================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+ 
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* h5bp.com/t */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+  
+  
+
+}
