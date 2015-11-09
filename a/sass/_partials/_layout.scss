@@ -160,14 +160,10 @@ footer {
 
       img {
           float: left;
-	        width: 150px;
-	        height: 150px;
+	       max-width: 200px;
 	        border-radius: 50%;
-
-	        shape-outside: circle();
-	        shape-margin: 15px;
-          //float:left;
-          //margin: 0 30px 20px 0;
+            -webkit-shape-outside: circle();
+            shape-outside: circle();
       }
 
   }
