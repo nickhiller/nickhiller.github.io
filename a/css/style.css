@@ -363,6 +363,10 @@ footer {
         width: 100%; }
       footer img {
         float: left;
-        margin: 0 30px 20px 0; } }
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        shape-outside: circle();
+        shape-margin: 15px; } }
 
 /*# sourceMappingURL=style.css.map */
