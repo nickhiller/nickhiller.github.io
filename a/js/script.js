@@ -2,7 +2,7 @@
 
 // $(window).scroll(function() {
 //     var scroll = $(window).scrollTop();
-// 
+//
 //     if (scroll >= 200) {
 //         $(".page-header").addClass("collapsed");
 //         $(".has-fixed-header").addClass("bumped");
@@ -10,5 +10,5 @@
 //         $(".page-header").removeClass("collapsed");
 //         $(".has-fixed-header").removeClass("bumped");
 //     }
-// 
+//
 // });
