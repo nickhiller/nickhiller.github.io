@@ -13,7 +13,7 @@ body {
   body.bumped {
     margin-top: 230px; }
   body.home {
-    background: #f1f1f1; }
+    background: #f3f2ef; }
 
 img {
   max-width: 100%; }
@@ -29,7 +29,7 @@ a {
     color: #474089; }
 
 body {
-  color: #3d3832; }
+  color: #343635; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Archivo Black', sans-serif; }
@@ -76,8 +76,9 @@ a.cta {
 
 .page-header {
   padding: 20px 0;
-  text-align: center;
-  transition: all .5s ease; }
+  transition: all .5s ease;
+  overflow: auto;
+  text-align: center; }
   .page-header .nick-photo {
     width: 150px;
     height: 150px;
@@ -85,6 +86,14 @@ a.cta {
   .page-header .social {
     width: 20px;
     margin: 10px 5px; }
+  @media only screen and (min-width: 650px) {
+    .page-header h1 {
+      text-align: left;
+      float: left; }
+    .page-header .social-links {
+      text-align: right;
+      float: right;
+      margin-top: 15px; } }
   @media only screen and (min-width: 800px) {
     .page-header .social {
       width: 25px;
@@ -94,7 +103,7 @@ a.cta {
   .page-header h1, .page-header p {
     margin: -10px 0 0; }
   .page-header span {
-    color: #6f665c;
+    color: #343635;
     font-family: 'Archivo Black', sans-serif;
     text-transform: uppercase;
     font-size: 16px;
@@ -126,7 +135,8 @@ a.cta {
       .page-header.collapsed .social-links {
         position: absolute;
         right: 0;
-        top: 5px; }
+        top: 5px;
+        margin: 0; }
       .page-header.collapsed h1 {
         font-size: 20px;
         margin: 0 10px; }
@@ -140,7 +150,7 @@ a.cta {
   background-size: cover;
   background-attachment: fixed;
   text-align: center;
-  border: 10px solid #ffcb92;
+  border: 15px solid #fcd48a;
   margin-bottom: 20px; }
   .primary-work img {
     width: 40%; }
@@ -151,7 +161,7 @@ a.cta {
     line-height: 1.25;
     margin: 20px 0 10px; }
     .primary-work h3 a {
-      color: #3d3832;
+      color: #343635;
       border-bottom: 0; }
       .primary-work h3 a:hover {
         color: #000; }
@@ -194,19 +204,19 @@ a.cta {
 
 .chimay {
   background: url("../img/bg-chimay2.png");
-  background-position: 100% 50%;
+  background-position: 100% 90%;
   background-size: 100%;
   background-attachment: fixed;
   padding: 20px;
-  border: 10px solid #f06449;
+  border: 15px solid #eb7655;
   margin-bottom: 20px; }
 
 .schneider {
   background: url("../img/schneider-bg2.png");
-  background-position: 100% 50%;
+  background-position: 100% 100%;
   background-size: 100%;
   background-attachment: fixed;
-  border: 10px solid #5bc3eb;
+  border: 15px solid #8facbc;
   padding: 20px; }
 
 @media only screen and (min-width: 780px) {
@@ -337,12 +347,12 @@ a.cta {
     margin-bottom: 5px; }
 
 footer {
-  background-color: #243140;
+  background-color: #343635;
   padding: 30px 0 30px;
   margin-top: 10px;
   margin-bottom: 20px;
   text-align: center;
-  color: #f1f1f1;
+  color: #f3f2ef;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased; }
   footer p {
@@ -351,7 +361,7 @@ footer {
     width: 90%;
     font-style: italic; }
   footer a {
-    color: #f1f1f1; }
+    color: #f3f2ef; }
   footer img {
     max-width: 150px;
     display: inline-block;
